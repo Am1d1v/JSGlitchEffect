@@ -13,9 +13,13 @@ for(let i = 0; i < 20; i++){
 const glitches = document.querySelectorAll('.box')
 
 // Random glitch appear
-glitches.forEach((glitch) => {
-    glitch.style.left = Math.random() * 100 + 'vw';
-    glitch.style.top = Math.random() * 100 + 'vh';
-    glitch.style.height = Math.random() * 100 + 'px';
-    glitch.style.width = Math.random() * 400 + 'px';
-});
+
+setInterval(() => {
+    glitches.forEach((glitch) => {
+        glitch.style.left = Math.random() * 100 + 'vw';
+        glitch.style.top = Math.random() * 100 + 'vh';
+        glitch.style.height = Math.random() * 100 + 'px';
+        glitch.style.width = Math.random() * 400 + 'px';
+        glitch.style.backgroundPosition = Math.random() * 50 + 'px';
+    });
+}, 600);
